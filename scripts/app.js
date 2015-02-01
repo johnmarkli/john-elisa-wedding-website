@@ -1,5 +1,5 @@
-angular.module('myApp', ['duScroll']).
-controller('MyCtrl', function($scope, $document){
+angular.module('myApp', ['duScroll', 'ui.bootstrap']).
+  controller('MyCtrl', function($scope, $document){
   Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
 
   $scope.rsvpForm = {};
@@ -10,6 +10,19 @@ controller('MyCtrl', function($scope, $document){
     {label: "am not attending", value: false}
   ];
   $scope.contentUrl = 'https://s3.amazonaws.com/john-elisa-wedding-website-content/images/';
+
+  $scope.myInterval = 5000;
+  var slides = $scope.slides = [
+    {image: $scope.contentUrl+'splash10.jpg'},
+    {image: $scope.contentUrl+'splash9.jpg'},
+    {image: $scope.contentUrl+'splash8.jpg'},
+    {image: $scope.contentUrl+'splash7.jpg'},
+    {image: $scope.contentUrl+'splash6.jpg'},
+    {image: $scope.contentUrl+'splash5.jpg'},
+    {image: $scope.contentUrl+'splash4.jpg'},
+    {image: $scope.contentUrl+'splash3.jpg'},
+    {image: $scope.contentUrl+'splash2.jpg'},
+  ];
 
   $scope.submitRsvpForm = function() {
     $scope.submittedRsvp = true;
@@ -47,4 +60,4 @@ controller('MyCtrl', function($scope, $document){
   var sectionTop = angular.element(document.getElementById('section-top'));
   $document.scrollToElementAnimated(sectionTop);
 }
-).value('duScrollOffset', 30);
+            ).value('duScrollOffset', 30);

@@ -5,6 +5,9 @@
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <title>J&E are getting married!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <script src="//www.parsecdn.com/js/parse-1.3.3.min.js"></script>
   </head>
@@ -16,12 +19,24 @@
           <li><a href="#section-1" du-smooth-scroll du-scrollspy>People</a></li>
           <li><a href="#section-2" du-smooth-scroll du-scrollspy>Wedding</a></li>
           <li><a href="#section-3" du-smooth-scroll du-scrollspy>RSVP</a></li>
-          <li><a href="#section-4" du-smooth-scroll du-scrollspy><img ng-src="{{contentUrl}}logo.jpg" alt="" style="max-width: 1.4em;"></a></li>
+          <!-- <li><a href="#section&#45;bottom" du&#45;smooth&#45;scroll du&#45;scrollspy><img ng&#45;src="{{contentUrl}}logo.jpg" alt="" style="max&#45;width: 1.4em;"></a></li> -->
         </ul>
       </nav>
       <section id="section-top">
-        <div>
-          <img id="intro-image" ng-src="{{contentUrl}}maison-john-elisa.jpg" alt="" style=""/>
+          <carousel interval="myInterval">
+          <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}" style="margin:auto;">
+          <!-- <div class="carousel&#45;caption"> -->
+          <!--   <h4>Slide {{$index}}</h4> -->
+          <!--   <p>{{slide.text}}</p> -->
+          <!-- </div> -->
+          </slide>
+          </carousel>
+          <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash10.jpg" alt=""/> -->
+          <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash9.jpg" alt=""/> -->
+          <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash1.jpg" alt=""/> -->
+          <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash2.jpg" alt=""/> -->
+          <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash3.jpg" alt=""/> -->
           <p id="intro-blurb">There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped - all we need are your lovely faces.
           <br>
           - J&E
@@ -33,21 +48,54 @@
       <section id="section-1">
         <h2>People</h2>
         <h3>The Couple</h3>
-        <h4>Elisa Costa / John Li</h4>
-        <img class="profile-pic" ng-src="{{contentUrl}}maison-elisa1.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}maison-john.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <h3>Bridesmaids</h3>
-        <h4>Cristina Costa / Amanda Costa / Kimberly Feeley / Josephine Kwong</h4>
-        <img class="profile-pic" ng-src="{{contentUrl}}cristina.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}amanda.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}kim.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}josephine.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <h3>Groomsmen</h3>
-        <h4>Gabriel Tsang / Gregory Gaisano / Jason Medeiros / Anthony Khoraych</h4>
-        <img class="profile-pic" ng-src="{{contentUrl}}gab.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}greg.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}jason.jpg" alt="" style="max-width: 10em; height: auto;"/>
-        <img class="profile-pic" ng-src="{{contentUrl}}anthony.jpg" alt="" style="max-width: 10em; height: auto;"/>
+        <div class="row well">
+          <div class="col-xs-6">
+            <h4>Elisa Costa</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}maison-elisa1.jpg" alt="" />
+          </div>
+          <div class="col-xs-6">
+            <h4>John Li</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}maison-john.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row well">
+          <h3>Bridesmaids</h3>
+          <div class="col-sm-3">
+            <h4>Cristina Costa</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}cristina.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Amanda Costa</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}amanda.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Kimberly Feeley</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}kim.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Josephine Kwong</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}josephine.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row well">
+          <h3>Groomsmen</h3>
+          <div class="col-sm-3">
+            <h4>Gabriel Tsang</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}gab.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Gregory Gaisano</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}greg.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Jason Medeiros</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}jason.jpg" alt="" />
+          </div>
+          <div class="col-sm-3">
+            <h4>Anthony Khoraych</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}anthony.jpg" alt="" />
+          </div>
+        </div>
       </section>
 
       <hr>
@@ -56,94 +104,107 @@
         <h2>Wedding</h2>
         <p>Saturday October 24, 2015</p>
         <p>Toronto / Ontario / Canada</p>
-        <h3>Ceremony</h3>
-        <a href="http://www.rosedaleunited.org">Rosedale United Church</a>
-        <!-- <img src="http://www.heatherfuller.com/account/70ec4e3f68d042f3/pages/60614_4.jpg"> -->
-        <br>
-        12:00pm
-        <h3>Cocktails</h3>
-        <a href="http://fountainblu.ca">FountainBlu</a>
-        <!-- <img src="https://pbs.twimg.com/profile_images/430809954409119744/n4nTyWPC.jpeg"> -->
-        <br>
-        5:00pm
-        <h3>Dinner</h3>
-        <a href="http://fountainblu.ca">FountainBlu</a>
-        <br>
-        6:00pm
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Ceremony</h3>
+            <a href="http://www.rosedaleunited.org">Rosedale United Church</a>
+            <!-- <img src="http://www.heatherfuller.com/account/70ec4e3f68d042f3/pages/60614_4.jpg"> -->
+            <br>
+            12:00pm
+          </div>
+          <div class="col-sm-4">
+            <h3>Cocktails</h3>
+            <a href="http://fountainblu.ca">FountainBlu</a>
+            <!-- <img src="https://pbs.twimg.com/profile_images/430809954409119744/n4nTyWPC.jpeg"> -->
+            <br>
+            5:00pm
+          </div>
+          <div class="col-sm-4">
+            <h3>Dinner</h3>
+            <a href="http://fountainblu.ca">FountainBlu</a>
+            <br>
+            6:00pm
+          </div>
+        </div>
       </section>
 
       <hr>
 
       <section id="section-3">
         <h2>RSVP</h2>
-        <form class="simple-form">
-          <p>
-          I, 
-          <input type="text" ng-model="rsvpForm.firstName" placeholder="first name"/> 
-          <input type="text" ng-model="rsvpForm.lastName" placeholder="last name"/> 
-          <select ng-init="rsvpForm.attending = attendingOptions[0].value" ng-model="rsvpForm.attending" ng-options="obj.value as obj.label for obj in attendingOptions">
-          </select>
-          the festivities. 
-          </p>
-          <div ng-if="rsvpForm.attending === attendingOptions[0].value">
+        <div class="row">
+          <form class="simple-form">
             <p>
-            My invitation mentioned I could bring 
-            <select ng-init="howManyComing = 1" ng-model="howManyComing">
-              <option value="1">my awesome self</option>
-              <option value="2">a date</option>
-              <option value="3">my family</option>
+            I, 
+            <input type="text" ng-model="rsvpForm.firstName" placeholder="first name"/> 
+            <input type="text" ng-model="rsvpForm.lastName" placeholder="last name"/> 
+            <select ng-init="rsvpForm.attending = attendingOptions[0].value" ng-model="rsvpForm.attending" ng-options="obj.value as obj.label for obj in attendingOptions">
             </select>
-            <span ng-show="howManyComing > 1">
-              , so I'll be bringing:
-            </span>
-            <span ng-if="howManyComing == 2">
-              <input type="text" ng-model="rsvpForm.datesName" placeholder="my date's name"/>.
-            </span>
-            <span ng-if="howManyComing == 3">
-              <br>
-              <input type="text" ng-model="rsvpForm.familyName1" placeholder="family member #1"/><br>
-              <input type="text" ng-model="rsvpForm.familyName2" placeholder="family member #2"/><br>
-              <input type="text" ng-model="rsvpForm.familyName3" placeholder="family member #3"/>
-            </span>
+            the festivities. 
             </p>
-            <p>
-            I prefer to eat
-            <input type="text" ng-model="rsvpForm.specialRequest" placeholder="special food requests"/>.
-            </p>
-            <p>
-            You'll find me on the dance floor when they play
-            <input type="text" ng-model="rsvpForm.songs" placeholder="song name"/>.
-            </p>
-            <p>
-            You can reach me at: <br>
-            <input type="text" ng-model="rsvpForm.email" placeholder="email"/><br>
-            <input type="text" ng-model="rsvpForm.phone" placeholder="phone"/><br>
-            <input type="text" ng-model="rsvpForm.address" placeholder="address"/><br>
-            <input type="text" ng-model="rsvpForm.city" placeholder="city"/><br>
-            <input type="text" ng-model="rsvpForm.stateProvince" placeholder="province or state"/><br>
-            <input type="text" ng-model="rsvpForm.country" placeholder="country"/><br>
-            <input type="text" ng-model="rsvpForm.postalCode" placeholder="postal code"/><br>
-            </p>
-          </div>
-          <div ng-show="rsvpForm.attending === attendingOptions[1].value">
-            <p>Sad to hear you can't make it. Thanks for letting us know!</p>
-          </div>
-          <button ng-click="submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
-          <div ng-show="savedRsvp">
-            <p>Saved!</p>
-          </div>
-        </form>
+            <div ng-if="rsvpForm.attending === attendingOptions[0].value">
+              <p>
+              My invitation mentioned I could bring 
+              <select ng-init="howManyComing = 1" ng-model="howManyComing">
+                <option value="1">my awesome self</option>
+                <option value="2">a date</option>
+                <option value="3">my family</option>
+              </select>
+              <span ng-show="howManyComing > 1">
+                , so I'll be bringing:
+              </span>
+              <span ng-if="howManyComing == 2">
+                <input type="text" ng-model="rsvpForm.datesName" placeholder="my date's name"/>.
+              </span>
+              <span ng-if="howManyComing == 3">
+                <br>
+                <input type="text" ng-model="rsvpForm.familyName1" placeholder="family member #1"/><br>
+                <input type="text" ng-model="rsvpForm.familyName2" placeholder="family member #2"/><br>
+                <input type="text" ng-model="rsvpForm.familyName3" placeholder="family member #3"/>
+              </span>
+              </p>
+              <p>
+              I prefer to eat
+              <input type="text" ng-model="rsvpForm.specialRequest" placeholder="special food requests"/>.
+              </p>
+              <p>
+              You'll find me on the dance floor when they play
+              <input type="text" ng-model="rsvpForm.songs" placeholder="song name"/>.
+              </p>
+              <p>
+              You can reach me at: <br>
+              <input type="text" ng-model="rsvpForm.email" placeholder="email"/><br>
+              <input type="text" ng-model="rsvpForm.phone" placeholder="phone"/><br>
+              <input type="text" ng-model="rsvpForm.address" placeholder="address"/><br>
+              <input type="text" ng-model="rsvpForm.city" placeholder="city"/><br>
+              <input type="text" ng-model="rsvpForm.stateProvince" placeholder="province or state"/><br>
+              <input type="text" ng-model="rsvpForm.country" placeholder="country"/><br>
+              <input type="text" ng-model="rsvpForm.postalCode" placeholder="postal code"/><br>
+              </p>
+            </div>
+            <div ng-show="rsvpForm.attending === attendingOptions[1].value">
+              <p>Sad to hear you can't make it. Thanks for letting us know!</p>
+            </div>
+            <button ng-click="submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
+            <div ng-show="savedRsvp">
+              <p>Saved!</p>
+            </div>
+          </form>
+        </div>
       </section>
 
       <footer>
-        <section id="section-4">
-          <img ng-src="{{contentUrl}}kiss.jpg" alt="" style="width: 100%; height: auto;"/>
+        <section id="section-bottom">
+          <img id="footer-image" ng-src="{{contentUrl}}kiss.jpg" alt=""/>
         </section>
       </footer>
         </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.6.4/angular-scroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
         <script src="./scripts/app.js"></script>
   </body>
 </html>

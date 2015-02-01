@@ -2,11 +2,35 @@
 @font-face { font-family: 'Bebas'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/BebasKai-Regular.otf'); }
 @font-face { font-family: 'Young & Beautiful'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/Mf+Young+%26+Beautiful.ttf'); }
 
+/* for ui.bootstrap */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 @media (max-width: 768px) {
   .je-logo span:after { content: 'J&E'}
+  .splash-image {
+    width: 100%;
+  }
+  #footer-image {
+    width: 100%;
+  }
+  nav a {
+    font-size: 1em;
+  }
+  #section-top {
+    padding: 4em 0 0 0;
+  }
 }
 @media (min-width: 769px) {
   .je-logo span:after { content: 'John & Elisa'}
+  #footer-image {
+    width:100%;
+  }
+  nav a {
+    font-size: 1.25em;
+  }
+#section-top {
+  padding: 5em 0 0 0;
+}
 }
 
 html, body {
@@ -22,7 +46,7 @@ h1 {
 }
 h2 {
   font-family: 'Bebas', Helvetica, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 2.2em;
 }
 img {
   max-width: 100%;
@@ -47,20 +71,32 @@ nav li, nav a {
   display: inline-block;
 }
 nav a {
-  padding: 20px;
+  padding: 1em;
   color: #333;
   text-decoration: none;
 }
-a:hover {
+nav a:hover {
   background: #F5DADE;
+  text-decoration: none;
+  color: #fff
 }
-a.active {
+nav a:focus {
+  text-decoration: none;
+  color: #fff
+}
+nav a.active {
   background: #A54399;
   color: #fff;
+  text-decoration: none;
   /* background: #00AC7F; */
 }
-#section-top {
-  padding: 4em 0 1em 0;
+#section-bottom {
+  padding: 0 0 0 0;
+}
+#section-3 {
+  /* background-image: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/images/kiss.jpg'); */
+  /* background-position: center center; */
+  /* background-size: cover; */
 }
 section {
   padding: 1.5em 0 1em 0;
@@ -70,10 +106,11 @@ footer {
   text-align: center;
 }
 button {
+  font-family: 'Bebas', Helvetica, Arial, sans-serif;
   font-size: 18px;
   border: 0;
   padding: 15px 30px;
-  background: #00AC7F;
+  background: #A54399;
   color: #fff;
   cursor: pointer;
 }
@@ -112,4 +149,7 @@ img.profile-pic {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  max-width: 10em;
+  height: auto;
 }
+

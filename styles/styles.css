@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@font-face { font-family: 'Bebas'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/BebasKai-Regular.otf'); }
+@font-face { font-family: 'Young & Beautiful'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/Mf+Young+%26+Beautiful.ttf'); }
+
+@media (max-width: 768px) {
+  .je-logo span:after { content: 'J&E'}
+}
+@media (min-width: 769px) {
+  .je-logo span:after { content: 'John & Elisa'}
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* background: #ebebeb; */
+}
+body, button {
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1 {
+  padding-top: 1em;
+}
+h2 {
+  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  font-size: 2em;
+}
+img {
+  max-width: 100%;
+}
+nav {
+  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+}
+nav li, nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center
+}
+nav li, nav a {
+  display: inline-block;
+}
+nav a {
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  background: #F5DADE;
+}
+a.active {
+  background: #A54399;
+  color: #fff;
+  /* background: #00AC7F; */
+}
+#section-top {
+  padding: 4em 0 1em 0;
+}
+section {
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+}
+footer {
+  text-align: center;
+}
+button {
+  font-size: 18px;
+  border: 0;
+  padding: 15px 30px;
+  background: #00AC7F;
+  color: #fff;
+  cursor: pointer;
+}
+.je-logo {
+  font-family: 'Young & Beautiful', cursive;
+  font-size: 1.5em;
+}
+#intro {
+  width: 100%;
+}
+#intro-image {
+  height: auto; 
+  position: relative;
+}
+#intro-title {
+  position: relative;
+  bottom: 5em;
+  font-family: 'Young & Beautiful', cursive;
+  font-size: 3em;
+  text-shadow: 1px 1px grey;
+  color: #00AC7F;
+  padding: 1em 1em 1em 1em;
+  /* text-align: center; */
+}
+#intro-blurb {
+  /* position: absolute;  */
+  /* bottom: 10em;  */
+  padding: 0 1em 1em 1em;
+  /* width: 75% */
+  /* color: white; */
+  /* text-align: right; */
+}
+
+img.profile-pic {
+  border:1px solid #;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}

@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @font-face { font-family: 'Bebas'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/BebasKai-Regular.otf'); }
 @font-face { font-family: 'Young & Beautiful'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/Mf+Young+%26+Beautiful.ttf'); }
+@font-face { font-family: 'Swiss721BT-Thin'; src: url(Swiss721BT-Thin.ttf); }
 
 /* for ui.bootstrap */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -39,20 +40,20 @@ html, body {
   /* background: #ebebeb; */
 }
 body, button {
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1 {
   padding-top: 1em;
 }
 h2 {
-  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', Helvetica, Arial, sans-serif;
   font-size: 2.2em;
 }
 img {
   max-width: 100%;
 }
 nav {
-  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', Helvetica, Arial, sans-serif;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -138,7 +139,8 @@ button {
 #intro-blurb {
   /* position: absolute;  */
   /* bottom: 10em;  */
-  padding: 0 1em 1em 1em;
+  padding: 2em 1em 1em 1em;
+  font-size: 1.75em;
   /* width: 75% */
   /* color: white; */
   /* text-align: right; */
@@ -149,7 +151,16 @@ img.profile-pic {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  max-width: 10em;
+  /* max-width: 9em; */
+  height: auto;
+}
+
+img.couple-profile-pic {
+  border:1px solid #;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  /* max-width: 9em; */
   height: auto;
 }
 

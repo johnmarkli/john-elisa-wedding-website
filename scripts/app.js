@@ -13,15 +13,15 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap']).
 
   $scope.myInterval = 5000;
   var slides = $scope.slides = [
-    {image: $scope.contentUrl+'splash10.jpg'},
-    {image: $scope.contentUrl+'splash9.jpg'},
-    {image: $scope.contentUrl+'splash8.jpg'},
-    {image: $scope.contentUrl+'splash7.jpg'},
-    {image: $scope.contentUrl+'splash6.jpg'},
-    {image: $scope.contentUrl+'splash5.jpg'},
-    {image: $scope.contentUrl+'splash4.jpg'},
-    {image: $scope.contentUrl+'splash3.jpg'},
-    {image: $scope.contentUrl+'splash2.jpg'},
+    {image: $scope.contentUrl+'cari/splash10.jpg'},
+    {image: $scope.contentUrl+'cari/splash9.jpg'},
+    {image: $scope.contentUrl+'cari/splash8.jpg'},
+    {image: $scope.contentUrl+'cari/splash7.jpg'},
+    {image: $scope.contentUrl+'cari/splash6.jpg'},
+    {image: $scope.contentUrl+'cari/splash5.jpg'},
+    {image: $scope.contentUrl+'cari/splash4.jpg'},
+    {image: $scope.contentUrl+'cari/splash3.jpg'},
+    {image: $scope.contentUrl+'cari/splash2.jpg'},
   ];
 
   $scope.submitRsvpForm = function() {

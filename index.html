@@ -13,88 +13,90 @@
   </head>
   <body>
     <div ng-controller="MyCtrl">
+      <div backstretch backstretch-images="slides">
       <nav>
         <ul>
           <li><a href="#section-top" du-smooth-scroll du-scrollspy><div class="je-logo"><span></span></div></a></li>
-          <li><a href="#section-1" du-smooth-scroll du-scrollspy>People</a></li>
+          <li><a href="#section-1" du-smooth-scroll du-scrollspy>Bridal Party</a></li>
           <li><a href="#section-2" du-smooth-scroll du-scrollspy>Wedding</a></li>
           <li><a href="#section-3" du-smooth-scroll du-scrollspy>RSVP</a></li>
           <!-- <li><a href="#section&#45;bottom" du&#45;smooth&#45;scroll du&#45;scrollspy><img ng&#45;src="{{contentUrl}}logo.jpg" alt="" style="max&#45;width: 1.4em;"></a></li> -->
         </ul>
       </nav>
       <section id="section-top">
-        <carousel interval="myInterval">
-        <slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <!-- <div class="carousel&#45;caption"> -->
-        <!--   <h4>Slide {{$index}}</h4> -->
-        <!--   <p>{{slide.text}}</p> -->
-        <!-- </div> -->
-        </slide>
-        </carousel>
+        <!-- <carousel interval="myInterval"> -->
+        <!-- <slide ng&#45;repeat="slide in slides" active="slide.active"> -->
+        <!-- <img ng&#45;src="{{slide.image}}" style="margin:auto;"> -->
+        <!-- <!&#45;&#45; <div class="carousel&#38;#45;caption"> &#45;&#45;> -->
+        <!-- <!&#45;&#45;   <h4>Slide {{$index}}</h4> &#45;&#45;> -->
+        <!-- <!&#45;&#45;   <p>{{slide.text}}</p> &#45;&#45;> -->
+        <!-- <!&#45;&#45; </div> &#45;&#45;> -->
+        <!-- </slide> -->
+        <!-- </carousel> -->
         <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash10.jpg" alt=""/> -->
         <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash9.jpg" alt=""/> -->
         <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash1.jpg" alt=""/> -->
         <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash2.jpg" alt=""/> -->
         <!-- <img class="splash&#45;image" ng&#45;src="{{contentUrl}}splash3.jpg" alt=""/> -->
         <p id="intro-blurb">
-        Ciao and 你好! We're excited to have you join us in celebrating our wedding. Bring your appetites and get ready for a night of culture, food, and celebration!
+        Ciao and 你好! We're excited to have you join us at our wedding. Bring your appetites and get ready for a night of culture, food, and celebration!
         <br>
         - J&E
         </p>
+      </div>
       </section>
 
-      <hr>
+      <!-- <hr> -->
 
       <section id="section-1">
-        <h2>People</h2>
-        <div class="row well">
-        <h3>The Couple</h3>
-          <div class="col-xs-6">
-            <h4>Elisa Costa</h4>
-            <img class="couple-profile-pic" ng-src="{{contentUrl}}cari/maison-elisa1.jpg" alt="" />
-          </div>
-          <div class="col-xs-6">
-            <h4>John Li</h4>
-            <img class="couple-profile-pic" ng-src="{{contentUrl}}cari/maison-john.jpg" alt="" />
-          </div>
-        </div>
+        <h2>Bridal Party</h2>
         <div class="row well">
           <h3>Bridesmaids</h3>
           <div class="col-xs-6 col-sm-3">
             <h4>Cristina Costa</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/cristina.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Cristina.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
-            <h4>Amanda Costa</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/amanda.jpg" alt="" />
+            <h4>Amanda Khoraych</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}Amanda.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
             <h4>Kimberly Feeley</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/kim.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Kim.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
             <h4>Josephine Kwong</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/josephine.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Josie.jpg" alt="" />
           </div>
         </div>
         <div class="row well">
           <h3>Groomsmen</h3>
           <div class="col-xs-6 col-sm-3">
             <h4>Gabriel Tsang</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/gab.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Gabe.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
             <h4>Gregory Gaisano</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/greg.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Greg.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
             <h4>Jason Medeiros</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/jason.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Jason.jpg" alt="" />
           </div>
           <div class="col-xs-6 col-sm-3">
             <h4>Anthony Khoraych</h4>
-            <img class="profile-pic" ng-src="{{contentUrl}}profiles/anthony.jpg" alt="" />
+            <img class="profile-pic" ng-src="{{contentUrl}}Anthony.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row well">
+          <h3>Flower Girl and Ring Boy</h3>
+          <div class="col-xs-6 col-sm-6">
+            <h4>Angelina Khoraych</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}Angelina.jpg" alt="" />
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            <h4>Tyler Li</h4>
+            <img class="profile-pic" ng-src="{{contentUrl}}Tyler.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -196,7 +198,7 @@
 
       <footer>
         <section id="section-bottom">
-          <img id="footer-image" ng-src="{{contentUrl}}cari/kiss.jpg" alt=""/>
+          <!-- <img id="footer&#45;image" ng&#45;src="{{contentUrl}}cari/kiss.jpg" alt=""/> -->
         </section>
       </footer>
     </div>
@@ -206,6 +208,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.6.4/angular-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="./scripts/ng-backstretch.min.js"></script>
     <script src="./scripts/app.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

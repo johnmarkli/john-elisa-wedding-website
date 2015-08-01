@@ -1,4 +1,4 @@
-angular.module('myApp', ['duScroll', 'ui.bootstrap']).
+angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
   controller('MyCtrl', function($scope, $document){
   Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
 
@@ -13,15 +13,14 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap']).
 
   $scope.myInterval = 5000;
   var slides = $scope.slides = [
-    {image: $scope.contentUrl+'cari/splash10.jpg'},
-    {image: $scope.contentUrl+'cari/splash9.jpg'},
-    {image: $scope.contentUrl+'cari/splash8.jpg'},
-    {image: $scope.contentUrl+'cari/splash7.jpg'},
-    {image: $scope.contentUrl+'cari/splash6.jpg'},
-    {image: $scope.contentUrl+'cari/splash5.jpg'},
-    {image: $scope.contentUrl+'cari/splash4.jpg'},
-    {image: $scope.contentUrl+'cari/splash3.jpg'},
-    {image: $scope.contentUrl+'cari/splash2.jpg'},
+    // $scope.contentUrl+'focus13.jpg',
+    $scope.contentUrl+'focus38.jpg',
+    $scope.contentUrl+'focus21.jpg',
+    $scope.contentUrl+'focus18.jpg',
+    $scope.contentUrl+'focus32.jpg',
+    $scope.contentUrl+'focus22.jpg',
+    $scope.contentUrl+'focus23.jpg',
+    $scope.contentUrl+'focus35.jpg',
   ];
 
   $scope.submitRsvpForm = function() {

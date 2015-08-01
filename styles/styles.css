@@ -19,7 +19,13 @@
   }
   #section-top {
     padding: 4em 0 0 0;
+    height: 100vh;
   }
+  .well-container {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
 }
 @media (min-width: 769px) {
   .je-logo span:after { content: 'John & Elisa'}
@@ -29,15 +35,19 @@
   nav a {
     font-size: 1.25em;
   }
-#section-top {
-  padding: 5em 0 0 0;
-}
+  #section-top {
+    padding: 5em 0 0 0;
+    height: 100vh;
+  }
+  .well-container {
+    margin-left: 15em;
+    margin-right: 15em;
+  }
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  /* background: #ebebeb; */
 }
 body, button {
   font-family: 'Swiss721BT-Thin', 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -61,6 +71,7 @@ nav {
   right: 0;
   background: #fff;
   background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 nav li, nav ul {
   list-style: none;
@@ -94,15 +105,16 @@ nav a.active {
 #section-bottom {
   padding: 0 0 0 0;
 }
-#section-3 {
-  /* background-image: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/images/kiss.jpg'); */
-  /* background-position: center center; */
-  /* background-size: cover; */
-}
 section {
   padding: 1.5em 0 1em 0;
   text-align: center;
 }
+
+.section-heading {
+  font-family: 'Young & Beautiful', cursive;
+  font-size: 4em;
+}
+
 footer {
   text-align: center;
 }
@@ -141,11 +153,11 @@ button {
   /* bottom: 10em;  */
   padding: 2em 1em 1em 1em;
   font-size: 1.75em;
-  height: 100vh;
+  /* height: 100vh; */
   /* width: 75% */
-  color: white;
+  /* color: white; */
   font-weight: bold;
-  /* text-align: left; */
+  text-align: center;
 }
 
 img.profile-pic {
@@ -154,7 +166,6 @@ img.profile-pic {
   /* -moz-border-radius: 20px; */
   /* border-radius: 20px; */
   /* max-width: 9em; */
-  padding: 2em 2em 2em 2em;
   height: auto;
 }
 
@@ -166,4 +177,3 @@ img.couple-profile-pic {
   /* max-width: 9em; */
   height: auto;
 }
-

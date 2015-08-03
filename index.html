@@ -157,15 +157,16 @@
               <div ng-if="rsvpForm.attending === attendingOptions[0].value">
                 <p>
                 <select ng-init="howManyComing = 1" ng-model="howManyComing">
-                  <option value="1">My awesome self</option>
-                  <option value="2">My partner or date</option>
+                  <option value="1">Just myself</option>
+                  <option value="2">My partner</option>
                   <option value="3">My family</option>
                 </select>
-                will be coming<span ng-show="howManyComing == 1">.</span><span ng-show="howManyComing > 1">, so I'll be bringing</span>
+                <span ng-show="howManyComing == 1">will be coming.</span>
                 <span ng-if="howManyComing == 2">
-                  <input type="text" ng-model="rsvpForm.datesName" placeholder="my date's name"/>.
+                  <input type="text" ng-model="rsvpForm.datesName" placeholder="my partner's name"/> will be coming with me.
                 </span>
                 <span ng-if="howManyComing == 3">
+                  will be coming. Here are their names:
                   <br>
                   <input type="text" ng-model="rsvpForm.familyName1" placeholder="family member #1"/><br>
                   <input type="text" ng-model="rsvpForm.familyName2" placeholder="family member #2"/><br>
@@ -177,7 +178,7 @@
                 </p>
                 <br>
                 <p>
-                I have these special food requests:
+                Special food requests include:
                 <input type="text" ng-model="rsvpForm.specialRequest" placeholder="allergy, veggie, etc."/>.
                 </p>
                 <br>
@@ -187,9 +188,6 @@
                 <input type="text" ng-model="rsvpForm.songs" placeholder="song name"/>.
                 </p>
                 <p>
-              </div>
-              <div ng-show="rsvpForm.attending === attendingOptions[1].value">
-                <p>Sad to hear you can't make it. Thanks for letting us know!</p>
               </div>
 
               <br>
@@ -209,7 +207,12 @@
               </div>
               <div ng-show="savedRsvp">
                 <br>
-                <p>You're all set! Thanks and we look forward to seeing you in October!</p>
+                <div ng-show="rsvpForm.attending == attendingOptions[0].value">
+                  <p>You're all set! Thanks and we look forward to seeing you in October!</p>
+                </div>
+                <div ng-show="rsvpForm.attending === attendingOptions[1].value">
+                  <p>Sad to hear you can't make it. Thanks for letting us know!</p>
+                </div>
               </div>
               <div ng-show="errorRsvp">
                 <br>

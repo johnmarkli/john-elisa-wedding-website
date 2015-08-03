@@ -27,21 +27,19 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
     $scope.submittedRsvp = true;
     var Rsvp = Parse.Object.extend("Rsvp");
     var rsvp = new Rsvp();
-    rsvp.save($scope.rsvpForm).then(function(object) {
-      console.log("saved!");
-      console.log($scope.rsvpForm);
-    });
+    // rsvp.save($scope.rsvpForm).then(function(object) {
+    //   console.log("saved!");
+    //   console.log($scope.rsvpForm);
+    // });
     rsvp.save($scope.rsvpForm, {
       success: function(rsvpResponse) {
-        console.log('New object created with objectId: ' + rsvpResponse.id);
         $scope.savedRsvp = true;
         $scope.saving = false;
+        console.log('New object created with objectId: ' + rsvpResponse.id);
         console.log('saved rsvp:');
         console.log($scope.savedRsvp);
       },
       error: function(rsvpResponse, error) {
-        // Execute any logic that should take place if the save fails.
-        // error is a Parse.Error with an error code and message.
         console.log('Failed to create new object, with error code: ' + error.message);
         $scope.errorRsvp = true;
       }

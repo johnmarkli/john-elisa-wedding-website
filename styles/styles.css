@@ -25,6 +25,9 @@
     margin-left: 1em;
     margin-right: 1em;
   }
+  #section-3 {
+    margin: 0.75em;
+  }
 
 }
 @media (min-width: 769px) {
@@ -51,6 +54,7 @@ html, body {
 }
 body, button {
   font-family: 'Swiss721BT-Thin', 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
 }
 h1 {
   padding-top: 1em;
@@ -127,6 +131,11 @@ button {
   color: #fff;
   cursor: pointer;
 }
+
+p {
+  font-size: 1.75em;
+}
+
 .je-logo {
   font-family: 'Young & Beautiful', cursive;
   font-size: 1.5em;
@@ -176,4 +185,8 @@ img.couple-profile-pic {
   border-radius: 20px;
   /* max-width: 9em; */
   height: auto;
+}
+
+button[disabled] {
+  background-color: grey;
 }

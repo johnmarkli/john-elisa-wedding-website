@@ -147,22 +147,21 @@ o!DOCTYPE html>
               <p>
               I, 
               <input type="text" ng-model="rsvpForm.firstName" placeholder="first name"/> 
-              <input type="text" ng-model="rsvpForm.lastName" placeholder="last name"/> 
+              <input type="text" ng-model="rsvpForm.lastName" placeholder="last name"/>
+              <br>
               <select ng-init="rsvpForm.attending = attendingOptions[0].value" ng-model="rsvpForm.attending" ng-options="obj.value as obj.label for obj in attendingOptions">
               </select>
               the festivities. 
               </p>
+              <br>
               <div ng-if="rsvpForm.attending === attendingOptions[0].value">
                 <p>
-                My invitation mentioned I could bring 
                 <select ng-init="howManyComing = 1" ng-model="howManyComing">
-                  <option value="1">my awesome self</option>
-                  <option value="2">a date</option>
-                  <option value="3">my family</option>
+                  <option value="1">My awesome self</option>
+                  <option value="2">My partner or date</option>
+                  <option value="3">My family</option>
                 </select>
-                <span ng-show="howManyComing > 1">
-                  , so I'll be bringing:
-                </span>
+                will be coming<span ng-show="howManyComing == 1">.</span><span ng-show="howManyComing > 1">, so I'll be bringing</span>
                 <span ng-if="howManyComing == 2">
                   <input type="text" ng-model="rsvpForm.datesName" placeholder="my date's name"/>.
                 </span>
@@ -170,34 +169,55 @@ o!DOCTYPE html>
                   <br>
                   <input type="text" ng-model="rsvpForm.familyName1" placeholder="family member #1"/><br>
                   <input type="text" ng-model="rsvpForm.familyName2" placeholder="family member #2"/><br>
-                  <input type="text" ng-model="rsvpForm.familyName3" placeholder="family member #3"/>
+                  <input type="text" ng-model="rsvpForm.familyName3" placeholder="family member #3"/><br>
+                  <input type="text" ng-model="rsvpForm.familyName4" placeholder="family member #4"/><br>
+                  <input type="text" ng-model="rsvpForm.familyName5" placeholder="family member #5"/><br>
+                  <input type="text" ng-model="rsvpForm.familyName6" placeholder="family member #6"/>
                 </span>
                 </p>
+                <br>
                 <p>
-                I prefer to eat
-                <input type="text" ng-model="rsvpForm.specialRequest" placeholder="special food requests"/>.
+                I have these special food requests:
+                <input type="text" ng-model="rsvpForm.specialRequest" placeholder="allergy, veggie, etc."/>.
                 </p>
+                <br>
                 <p>
                 You'll find me on the dance floor when they play
+              <i class="icon-spinner icon-spin icon-large"></i>
                 <input type="text" ng-model="rsvpForm.songs" placeholder="song name"/>.
                 </p>
                 <p>
-                You can reach me at: <br>
-                <input type="text" ng-model="rsvpForm.email" placeholder="email"/><br>
-                <input type="text" ng-model="rsvpForm.phone" placeholder="phone"/><br>
-                <input type="text" ng-model="rsvpForm.address" placeholder="address"/><br>
-                <input type="text" ng-model="rsvpForm.city" placeholder="city"/><br>
-                <input type="text" ng-model="rsvpForm.stateProvince" placeholder="province or state"/><br>
-                <input type="text" ng-model="rsvpForm.country" placeholder="country"/><br>
-                <input type="text" ng-model="rsvpForm.postalCode" placeholder="postal code"/><br>
-                </p>
               </div>
               <div ng-show="rsvpForm.attending === attendingOptions[1].value">
                 <p>Sad to hear you can't make it. Thanks for letting us know!</p>
               </div>
-              <button ng-click="submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
+
+              <br>
+
+              <button ng-show="!savedRsvp" ng-click="saving = true; submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
+              <div ng-show="saving">
+                <br>
+                <p>
+                Sending in your RSVP...
+                </p>
+              </div>
+              <div ng-show="!savedRsvp">
+                <br> 
+                or 
+                <br> 
+                <a href="mailto:johnandelisawedding@gmail.com">I'd rather email my RSVP at johnandelisawedding@gmail.com</a>
+              </div>
               <div ng-show="savedRsvp">
-                <p>Saved!</p>
+                <br>
+                <p>You're all set! Thanks and we look forward to seeing you in October!</p>
+              </div>
+              <div ng-show="errorRsvp">
+                <br>
+                <p>
+                Something went wrong :(
+                <br>
+                Please RSVP at <a href="mailto:johnandelisawedding@gmail.com">johnandelisawedding@gmail.com</a> instead.
+                </p>
               </div>
             </form>
           </div>

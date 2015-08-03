@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
   controller('MyCtrl', function($scope, $document){
   Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
@@ -11,9 +13,7 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
   ];
   $scope.contentUrl = 'https://s3.amazonaws.com/john-elisa-wedding-website-content/images/';
 
-  $scope.myInterval = 5000;
   var slides = $scope.slides = [
-    // $scope.contentUrl+'focus13.jpg',
     $scope.contentUrl+'focus38.jpg',
     $scope.contentUrl+'focus21.jpg',
     $scope.contentUrl+'focus18.jpg',
@@ -35,6 +35,7 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
       success: function(rsvpResponse) {
         console.log('New object created with objectId: ' + rsvpResponse.id);
         $scope.savedRsvp = true;
+        $scope.saving = false;
         console.log('saved rsvp:');
         console.log($scope.savedRsvp);
       },
@@ -42,6 +43,7 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
         // Execute any logic that should take place if the save fails.
         // error is a Parse.Error with an error code and message.
         console.log('Failed to create new object, with error code: ' + error.message);
+        $scope.errorRsvp = true;
       }
     });
   };

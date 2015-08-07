@@ -19,7 +19,7 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
     // $scope.contentUrl+'focus18.jpg',
     $scope.contentUrl+'focus22.jpg',
     // $scope.contentUrl+'focus23.jpg',
-    $scope.contentUrl+'focus35.jpg',
+    // $scope.contentUrl+'focus35.jpg',
   ];
 
   $scope.submitRsvpForm = function() {
@@ -34,6 +34,7 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
       success: function(rsvpResponse) {
         $scope.savedRsvp = true;
         $scope.saving = false;
+        $scope.submittedRsvp = false;
         console.log('New object created with objectId: ' + rsvpResponse.id);
         console.log('saved rsvp:');
         console.log($scope.savedRsvp);
@@ -44,7 +45,6 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
       }
     });
   };
-
 
   $scope.toTheTop = function() {
     $document.scrollTopAnimated(0).then(function() {

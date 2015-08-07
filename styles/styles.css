@@ -190,3 +190,9 @@ img.couple-profile-pic {
 button[disabled] {
   background-color: grey;
 }
+
+input[type=text]{
+  /* display: block; */
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}

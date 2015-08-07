@@ -192,7 +192,7 @@
 
               <br>
 
-              <button ng-click="saving = true; submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
+              <button ng-show="!savedRsvp" ng-click="saving = true; submitRsvpForm()" ng-disabled="submittedRsvp">Submit</button>
               <div ng-show="saving">
                 <br>
                 <p>
@@ -212,9 +212,6 @@
                 </div>
                 <div ng-show="rsvpForm.attending === attendingOptions[1].value">
                   <p>Sad to hear you can't make it. Thanks for letting us know!</p>
-                </div>
-                <div>
-                  <small>If you made a mistake, feel free to submit your RSVP again :)</small>
                 </div>
               </div>
               <div ng-show="errorRsvp">

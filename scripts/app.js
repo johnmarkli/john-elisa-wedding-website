@@ -34,7 +34,6 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
       success: function(rsvpResponse) {
         $scope.savedRsvp = true;
         $scope.saving = false;
-        $scope.submittedRsvp = false;
         console.log('New object created with objectId: ' + rsvpResponse.id);
         console.log('saved rsvp:');
         console.log($scope.savedRsvp);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
-  controller('MyCtrl', function($scope, $document){
+  controller('MyCtrl', function($scope, $document, $timeout){
   Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
 
   $scope.rsvpForm = {};
@@ -15,11 +15,12 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap', 'ng-backstretch']).
 
   var slides = $scope.slides = [
     $scope.contentUrl+'focus32.jpg',
-    $scope.contentUrl+'focus38.jpg',
-    // $scope.contentUrl+'focus18.jpg',
     $scope.contentUrl+'focus22.jpg',
-    // $scope.contentUrl+'focus23.jpg',
-    // $scope.contentUrl+'focus35.jpg',
+    $scope.contentUrl+'focus8.jpg',
+    // $scope.contentUrl+'focus13.jpg',
+    $scope.contentUrl+'focus21.jpg',
+    // $scope.contentUrl+'focus47.jpg',
+    // $scope.contentUrl+'focus43.jpg',
   ];
 
   $scope.submitRsvpForm = function() {

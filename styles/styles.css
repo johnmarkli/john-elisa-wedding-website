@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @font-face { font-family: 'Bebas'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/BebasKai-Regular.otf'); }
 @font-face { font-family: 'Young & Beautiful'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/Mf+Young+%26+Beautiful.ttf'); }
+@font-face { font-family: 'Swiss721BT-Thin'; src: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/fonts/Swiss721BT-Thin.ttf'); }
 
 /* for ui.bootstrap */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -14,11 +15,20 @@
     width: 100%;
   }
   nav a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #section-top {
     padding: 4em 0 0 0;
+    height: 100vh;
   }
+  .well-container {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  #section-3 {
+    margin: 0.7em;
+  }
+
 }
 @media (min-width: 769px) {
   .je-logo span:after { content: 'John & Elisa'}
@@ -26,40 +36,46 @@
     width:100%;
   }
   nav a {
-    font-size: 1.25em;
+    font-size: 1em;
   }
-#section-top {
-  padding: 5em 0 0 0;
-}
+  #section-top {
+    padding: 5em 0 0 0;
+    height: 100vh;
+  }
+  .well-container {
+    margin-left: 15em;
+    margin-right: 15em;
+  }
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  /* background: #ebebeb; */
 }
 body, button {
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
 }
 h1 {
   padding-top: 1em;
 }
 h2 {
-  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', Helvetica, Arial, sans-serif;
   font-size: 2.2em;
 }
 img {
   max-width: 100%;
 }
 nav {
-  font-family: 'Bebas', Helvetica, Arial, sans-serif;
+  font-family: 'Swiss721BT-Thin', Helvetica, Arial, sans-serif;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   background: #fff;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 nav li, nav ul {
   list-style: none;
@@ -93,15 +109,16 @@ nav a.active {
 #section-bottom {
   padding: 0 0 0 0;
 }
-#section-3 {
-  /* background-image: url('https://s3.amazonaws.com/john-elisa-wedding-website-content/images/kiss.jpg'); */
-  /* background-position: center center; */
-  /* background-size: cover; */
-}
 section {
   padding: 1.5em 0 1em 0;
   text-align: center;
 }
+
+.section-heading {
+  font-family: 'Young & Beautiful', cursive;
+  font-size: 4em;
+}
+
 footer {
   text-align: center;
 }
@@ -114,6 +131,11 @@ button {
   color: #fff;
   cursor: pointer;
 }
+
+p {
+  font-size: 1.75em;
+}
+
 .je-logo {
   font-family: 'Young & Beautiful', cursive;
   font-size: 1.5em;
@@ -138,18 +160,44 @@ button {
 #intro-blurb {
   /* position: absolute;  */
   /* bottom: 10em;  */
-  padding: 0 1em 1em 1em;
+  padding: 2em 1em 1em 1em;
+  font-size: 1.75em;
+  /* height: 100vh; */
   /* width: 75% */
   /* color: white; */
-  /* text-align: right; */
+  font-weight: bold;
+  text-align: center;
 }
 
 img.profile-pic {
   border:1px solid #;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  max-width: 10em;
+  /* -webkit-border-radius: 20px; */
+  /* -moz-border-radius: 20px; */
+  /* border-radius: 20px; */
+  /* max-width: 9em; */
   height: auto;
 }
 
+img.couple-profile-pic {
+  border:1px solid #;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  /* max-width: 9em; */
+  height: auto;
+}
+
+button[disabled] {
+  background-color: grey;
+}
+
+input[type=text]{
+  /* display: block; */
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+select {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}

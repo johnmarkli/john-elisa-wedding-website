@@ -11,17 +11,14 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap']).
   ];
   $scope.contentUrl = 'https://s3.amazonaws.com/john-elisa-wedding-website-content/images/';
 
-  $scope.myInterval = 5000;
   var slides = $scope.slides = [
-    {image: $scope.contentUrl+'splash10.jpg'},
-    {image: $scope.contentUrl+'splash9.jpg'},
-    {image: $scope.contentUrl+'splash8.jpg'},
-    {image: $scope.contentUrl+'splash7.jpg'},
-    {image: $scope.contentUrl+'splash6.jpg'},
-    {image: $scope.contentUrl+'splash5.jpg'},
-    {image: $scope.contentUrl+'splash4.jpg'},
-    {image: $scope.contentUrl+'splash3.jpg'},
-    {image: $scope.contentUrl+'splash2.jpg'},
+    $scope.contentUrl+'focus32.jpg',
+    $scope.contentUrl+'focus22.jpg',
+    $scope.contentUrl+'focus8.jpg',
+    // $scope.contentUrl+'focus13.jpg',
+    $scope.contentUrl+'focus21.jpg',
+    // $scope.contentUrl+'focus47.jpg',
+    // $scope.contentUrl+'focus43.jpg',
   ];
 
   $scope.submitRsvpForm = function() {
@@ -46,7 +43,6 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap']).
 //       }
 //     });
   };
-
 
   $scope.toTheTop = function() {
     $document.scrollTopAnimated(0).then(function() {

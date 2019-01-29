@@ -1,6 +1,6 @@
 angular.module('myApp', ['duScroll', 'ui.bootstrap']).
   controller('MyCtrl', function($scope, $document){
-  Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
+  // Parse.initialize("TWTtRIX2bPIiZgXkgwDm3ImlZWFFAs3sYPPNPZYN", "iBEHzjlS1vZEhvDmN6Pl7MjjY2Nd0xoh1qeS6M8a");
 
   $scope.rsvpForm = {};
   $scope.submittedRsvp = false;
@@ -26,25 +26,25 @@ angular.module('myApp', ['duScroll', 'ui.bootstrap']).
 
   $scope.submitRsvpForm = function() {
     $scope.submittedRsvp = true;
-    var Rsvp = Parse.Object.extend("Rsvp");
-    var rsvp = new Rsvp();
-    rsvp.save($scope.rsvpForm).then(function(object) {
-      console.log("saved!");
-      console.log($scope.rsvpForm);
-    });
-    rsvp.save($scope.rsvpForm, {
-      success: function(rsvpResponse) {
-        console.log('New object created with objectId: ' + rsvpResponse.id);
-        $scope.savedRsvp = true;
-        console.log('saved rsvp:');
-        console.log($scope.savedRsvp);
-      },
-      error: function(rsvpResponse, error) {
-        // Execute any logic that should take place if the save fails.
-        // error is a Parse.Error with an error code and message.
-        console.log('Failed to create new object, with error code: ' + error.message);
-      }
-    });
+//     var Rsvp = Parse.Object.extend("Rsvp");
+//     var rsvp = new Rsvp();
+//     rsvp.save($scope.rsvpForm).then(function(object) {
+//       console.log("saved!");
+//       console.log($scope.rsvpForm);
+//     });
+//     rsvp.save($scope.rsvpForm, {
+//       success: function(rsvpResponse) {
+//         console.log('New object created with objectId: ' + rsvpResponse.id);
+//         $scope.savedRsvp = true;
+//         console.log('saved rsvp:');
+//         console.log($scope.savedRsvp);
+//       },
+//       error: function(rsvpResponse, error) {
+//         // Execute any logic that should take place if the save fails.
+//         // error is a Parse.Error with an error code and message.
+//         console.log('Failed to create new object, with error code: ' + error.message);
+//       }
+//     });
   };
 
 
